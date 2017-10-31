@@ -15,7 +15,7 @@ install:
 
 script:
   - xbuild /p:Configuration=Release ./FactorioServerLauncher.sln
-  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe -labels -nologo ./FactorioServerLauncher/bin/Release/FactorioServerLauncher.exe
+#  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe -labels -nologo ./FactorioServerLauncher/bin/Release/FactorioServerLauncher.exe
 
 after_script:
-  - nunit-console bin/Release/FactorioServerLauncher.exe
+#  - nunit-console bin/Release/FactorioServerLauncher.exe
