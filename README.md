@@ -14,8 +14,7 @@ Get the last version [here](https://github.com/Limmek/Factorio-Server-Launcher/r
 * Download and install both SteamCMD and Factorio
 * Steam 2 way authentication
 * Map Generator
-* Version checker
-* Updater
+* Client updater
 
 Tested on Windows 10 and Windows server 2016.
 
