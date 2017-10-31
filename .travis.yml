@@ -1,5 +1,11 @@
 language: csharp
 
+mono:
+  - latest
+  
+notifications:
+  email: false
+
 solution: FactorioServerLauncher.sln
 
 install:
