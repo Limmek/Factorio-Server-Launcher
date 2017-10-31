@@ -1156,7 +1156,7 @@
             this.tabMapGenerator.Padding = new System.Windows.Forms.Padding(3);
             this.tabMapGenerator.Size = new System.Drawing.Size(598, 423);
             this.tabMapGenerator.TabIndex = 1;
-            this.tabMapGenerator.Text = "MapGenerator";
+            this.tabMapGenerator.Text = "Map Generator";
             this.tabMapGenerator.UseVisualStyleBackColor = true;
             // 
             // gbSize
