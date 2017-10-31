@@ -17,6 +17,8 @@ Get the last version [here](https://github.com/Limmek/Factorio-Server-Launcher/r
 * Version checker
 * Updater
 
+Tested on Windows 10 and Windows server 2016.
+
 # Screenshots
 <img src="https://raw.githubusercontent.com/Limmek/Factorio-Server-Launcher/master/images/server-settings.jpg">
 <img src="https://raw.githubusercontent.com/Limmek/Factorio-Server-Launcher/master/images/map-generator.jpg">
