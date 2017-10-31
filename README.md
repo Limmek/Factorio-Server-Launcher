@@ -6,6 +6,9 @@ This tool allow you to host a dedicated server on the same machine the game is r
 
 ### Supports ONLY Steam and SteamCMD installation of Factorio!
 
+# Download
+Get the last version [here](https://github.com/Limmek/Factorio-Server-Launcher/releases/download/1.0.0.0/FactorioServerLauncher.exe)
+
 # Features
 * Run the server and play the game on same computer
 * Download and install both SteamCMD and Factorio
@@ -19,12 +22,6 @@ This tool allow you to host a dedicated server on the same machine the game is r
 <img src="https://raw.githubusercontent.com/Limmek/Factorio-Server-Launcher/master/images/map-generator.jpg">
 <img src="https://raw.githubusercontent.com/Limmek/Factorio-Server-Launcher/master/images/steam-cmd.jpg">
 
-# Download
-Get the last version [here](https://github.com/Limmek/Factorio-Server-Launcher/releases/download/1.0.0.0/FactorioServerLauncher.exe)
-
-# License
-The MIT License (MIT) foud [here](https://github.com/Limmek/Factorio-Server-Launcher/blob/master/LICENSE)
-
 # Contribution
 Feel free to contribute!
 
@@ -33,3 +30,7 @@ Feel free to contribute!
 3. Commit your changes: git commit -am 'Add some feature'
 4. Push to the branch: git push origin my-new-feature
 5. Submit a pull request
+
+
+# License
+The MIT License (MIT) foud [here](https://github.com/Limmek/Factorio-Server-Launcher/blob/master/LICENSE)
