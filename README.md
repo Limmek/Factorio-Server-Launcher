@@ -9,6 +9,7 @@ This tool allow you to host a dedicated server on the same machine the game is r
 # Features
 * Run the server and play the game on same computer
 * Download and install both SteamCMD and Factorio
+* Steam 2 way authentication
 * Map Generator
 * Version checker
 * Updater
