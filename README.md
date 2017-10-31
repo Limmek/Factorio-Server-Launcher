@@ -14,7 +14,9 @@ This tool allow you to host a dedicated server on the same machine the game is r
 * Updater
 
 # Screenshots
-..
+<img src="https://raw.githubusercontent.com/Limmek/Factorio-Server-Launcher/master/images/server-settings.jpg">
+<img src="https://raw.githubusercontent.com/Limmek/Factorio-Server-Launcher/master/images/map-generator.jpg">
+<img src="https://raw.githubusercontent.com/Limmek/Factorio-Server-Launcher/master/images/steam-cmd.jpg">
 
 # Download
 Get the last version [here](https://github.com/Limmek/Factorio-Server-Launcher/releases/download/1.0.0.0/FactorioServerLauncher.exe)
