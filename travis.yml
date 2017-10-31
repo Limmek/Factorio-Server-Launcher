@@ -1,21 +1,7 @@
 language: csharp
 
-notifications:
-  email: false
-
-mono:
-  - latest
-
-before_install:
-
-solution: "./FactorioServerLauncher.sln"
+solution: FactorioServerLauncher.sln
 
 install:
-- nuget restore ./FactorioServerLauncher.sln
-
-script:
-  - xbuild /p:Configuration=Release ./FactorioServerLauncher.sln
-#  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe -labels -nologo ./FactorioServerLauncher/bin/Release/FactorioServerLauncher.exe
-
-after_script:
-#  - nunit-console bin/Release/FactorioServerLauncher.exe
+  - sudo apt-get install -y gtk-sharp2
+  - nuget restore FactorioServerLauncher.sln
