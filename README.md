@@ -15,6 +15,8 @@ Get the last version [here](https://github.com/Limmek/Factorio-Server-Launcher/r
 * Steam 2 way authentication
 * Map Generator
 * Client updater
+* Auto detects Steam/Factorio install folder
+* Auto loading save files.
 
 Tested on Windows 10 and Windows server 2016.
 
