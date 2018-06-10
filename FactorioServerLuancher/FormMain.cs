@@ -365,5 +365,13 @@ namespace FactorioServerLauncher
             if (Settings.Download)
                 Settings.DownloadNewVersion(this);
         }
+
+        private void modEnabled_CheckedChanged(object sender, EventArgs e)
+        {
+            if (modEnabled.Checked)
+                modEnabled.Text = "Mods Enabled";
+            else
+                modEnabled.Text = "Mods Disabled";
+        }
     }
 }

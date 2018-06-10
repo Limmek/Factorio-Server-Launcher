@@ -1,5 +1,4 @@
 # Factorio Server Launcher
-<img src="https://travis-ci.org/Limmek/Factorio-Server-Launcher.svg?branch=master"> <img src="http://img.shields.io/:license-mit-blue.svg">
 
 Factorio Server Launcher is a tool to run a Dedicated Factorio server.
 This tool allow you to host a dedicated server on the same machine the game is running and still be able to connect and play.
@@ -17,6 +16,7 @@ Get the last version [here](https://github.com/Limmek/Factorio-Server-Launcher/r
 * Client updater
 * Auto detects Steam/Factorio install folder
 * Auto loading save files.
+* Mods support added.
 
 Tested on Windows 10 and Windows server 2016.
 

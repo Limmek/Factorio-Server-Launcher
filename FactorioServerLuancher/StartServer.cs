@@ -20,9 +20,15 @@ namespace FactorioServerLauncher
         [PermissionSet(SecurityAction.Demand, Name = "FullTrust")]
         public static void Start(FormMain mainForm)
         {
-            StartArguments =    " --start-server " + Settings.factorioSavesPath + mainForm.listBoxSavedGames.SelectedItem.ToString() +
+            StartArguments = " --start-server " + Settings.factorioSavesPath + mainForm.listBoxSavedGames.SelectedItem.ToString() +
                                 " --server-settings " + Settings.factorioLauncherServerSettingsFile +
                                 " -c " + Settings.factorioLauncherConfig;
+
+            if(mainForm.modEnabled.Checked)
+                if(mainForm.modPath.TextLength > 2)
+                    StartArguments = StartArguments + " --mod-directory " + mainForm.modPath.Text;
+                else
+                    StartArguments = StartArguments + " --mod-directory " + Settings.factorioModsPath;
 
             ProcessStartInfo startInfo = new ProcessStartInfo();
             startInfo.WindowStyle = ProcessWindowStyle.Normal;

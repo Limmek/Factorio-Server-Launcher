@@ -20,17 +20,18 @@ namespace FactorioServerLauncher
         public static string steamPath;                                     // Steam
 
         public static string factorioInstallPath;                           // Factorio installation folder
-        public static string factorioPath;                                  // Factorio resources folder
+        public static string factorioPath;                                  // Factorio resources 
+        public static string factorioModsPath;                              //Factorio Mod folderfolder
         public static string factorioSavesPath;                             // Factorio save files
         public static string factorioConfig;                                // Factorio config file
         public static string factorioEXEPath;                               // Path to Factorio.exe
         public static string factorioEXE;                                   // Factorio.exe
-
+        
         public static string factorioLauncherPath;                          // Launcher resources folder
         public static string factorioLauncherConfig;                        // Factorio launcher config file
         public static string factorioLauncherServerSettingsFile;            // Factorio launcher server settings file
         public static string factorioLauncherMapGenSettingsFile;            // Factorio launcher map gen settings file
-        public static string factorioLauncherMapSettingsFile;            // Factorio launcher map settings file
+        public static string factorioLauncherMapSettingsFile;               // Factorio launcher map settings file
         public static string factorioLauncherSettingsFile;                  // Factorio launcher server settings file
 
         [System.Runtime.InteropServices.DllImport("kernel32")]
@@ -76,6 +77,7 @@ namespace FactorioServerLauncher
             }
 
             factorioPath = appDataPath + @"\factorio\";
+            factorioModsPath = factorioPath + @"mods\";
             factorioSavesPath = factorioPath + @"saves\";
             factorioConfig = factorioPath + @"config\config.ini";
             factorioInstallPath = steamPath + @"\steamapps\common\factorio\";

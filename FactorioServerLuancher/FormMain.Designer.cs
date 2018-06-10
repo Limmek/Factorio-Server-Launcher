@@ -175,6 +175,10 @@
             this.tabConsole = new System.Windows.Forms.TabPage();
             this.console = new System.Windows.Forms.RichTextBox();
             this.tReloadSavedGames = new System.Windows.Forms.Timer(this.components);
+            this.tabMods = new System.Windows.Forms.TabPage();
+            this.modEnabled = new System.Windows.Forms.CheckBox();
+            this.modPath = new System.Windows.Forms.TextBox();
+            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.groupVisibility.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.gInstallFactorio.SuspendLayout();
@@ -192,6 +196,7 @@
             this.gbRichness.SuspendLayout();
             this.tabSteamCMD.SuspendLayout();
             this.tabConsole.SuspendLayout();
+            this.tabMods.SuspendLayout();
             this.SuspendLayout();
             // 
             // bStartServer
@@ -847,6 +852,7 @@
             // 
             // runTimeTimer
             // 
+            this.runTimeTimer.Interval = 75;
             this.runTimeTimer.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // lTag
@@ -1087,6 +1093,7 @@
             // 
             this.tabControl2.Controls.Add(this.tabTags);
             this.tabControl2.Controls.Add(this.tabAdmins);
+            this.tabControl2.Controls.Add(this.tabMods);
             this.tabControl2.Location = new System.Drawing.Point(440, 0);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
@@ -1840,6 +1847,52 @@
             this.tReloadSavedGames.Interval = 2000;
             this.tReloadSavedGames.Tick += new System.EventHandler(this.tReloadSavedGames_Tick);
             // 
+            // tabMods
+            // 
+            this.tabMods.Controls.Add(this.linkLabel3);
+            this.tabMods.Controls.Add(this.modPath);
+            this.tabMods.Controls.Add(this.modEnabled);
+            this.tabMods.Location = new System.Drawing.Point(4, 22);
+            this.tabMods.Name = "tabMods";
+            this.tabMods.Size = new System.Drawing.Size(152, 191);
+            this.tabMods.TabIndex = 2;
+            this.tabMods.Text = "Mods";
+            this.tabMods.UseVisualStyleBackColor = true;
+            // 
+            // modEnabled
+            // 
+            this.modEnabled.AutoSize = true;
+            this.modEnabled.Location = new System.Drawing.Point(23, 11);
+            this.modEnabled.Name = "modEnabled";
+            this.modEnabled.Size = new System.Drawing.Size(106, 17);
+            this.modEnabled.TabIndex = 0;
+            this.modEnabled.Text = "Mods is Disabled";
+            this.modEnabled.UseVisualStyleBackColor = true;
+            this.modEnabled.CheckedChanged += new System.EventHandler(this.modEnabled_CheckedChanged);
+            // 
+            // modPath
+            // 
+            this.modPath.Location = new System.Drawing.Point(3, 47);
+            this.modPath.Name = "modPath";
+            this.modPath.Size = new System.Drawing.Size(145, 20);
+            this.modPath.TabIndex = 1;
+            // 
+            // linkLabel3
+            // 
+            this.linkLabel3.ActiveLinkColor = System.Drawing.Color.Black;
+            this.linkLabel3.DisabledLinkColor = System.Drawing.Color.Black;
+            this.linkLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel3.LinkArea = new System.Windows.Forms.LinkArea(68, 0);
+            this.linkLabel3.LinkColor = System.Drawing.Color.Blue;
+            this.linkLabel3.Location = new System.Drawing.Point(23, 81);
+            this.linkLabel3.Name = "linkLabel3";
+            this.linkLabel3.Size = new System.Drawing.Size(97, 60);
+            this.linkLabel3.TabIndex = 101;
+            this.linkLabel3.Text = "Set custom mod folder or leave it blank to load from deafault folder";
+            this.linkLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.linkLabel3.UseCompatibleTextRendering = true;
+            this.linkLabel3.VisitedLinkColor = System.Drawing.Color.Black;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1888,6 +1941,8 @@
             this.tabSteamCMD.ResumeLayout(false);
             this.tabSteamCMD.PerformLayout();
             this.tabConsole.ResumeLayout(false);
+            this.tabMods.ResumeLayout(false);
+            this.tabMods.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2039,6 +2094,10 @@
         private System.Windows.Forms.ToolStripMenuItem bOpenSteamFolder;
         private System.Windows.Forms.ImageList imageList;
         public System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabMods;
+        public System.Windows.Forms.TextBox modPath;
+        public System.Windows.Forms.CheckBox modEnabled;
+        private System.Windows.Forms.LinkLabel linkLabel3;
     }
 }
 
