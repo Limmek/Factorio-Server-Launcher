@@ -23,7 +23,7 @@ namespace FactorioServerLauncher
             if (Username != "" && Password != "")
                 AnonumysLogin = "+login " + Username + " " + Password;
 
-            var StartArguments = AnonumysLogin + " +force_install_dir " + Settings.factorioInstallPath + " +app_update 427520 validate +quit";
+            var StartArguments = AnonumysLogin + " +force_install_dir " + Settings.factorioInstallPath + " +app_update "+ Settings.appId.ToString() +" validate +quit";
             ProcessStartInfo startInfo = new ProcessStartInfo();
             startInfo.WindowStyle = ProcessWindowStyle.Normal;
             startInfo.Verb = "runas";

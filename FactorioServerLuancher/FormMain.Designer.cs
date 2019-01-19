@@ -120,6 +120,10 @@
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabTags = new System.Windows.Forms.TabPage();
             this.tabAdmins = new System.Windows.Forms.TabPage();
+            this.tabMods = new System.Windows.Forms.TabPage();
+            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
+            this.modPath = new System.Windows.Forms.TextBox();
+            this.modEnabled = new System.Windows.Forms.CheckBox();
             this.tabMapGenerator = new System.Windows.Forms.TabPage();
             this.gbSize = new System.Windows.Forms.GroupBox();
             this.mapGeneratorSizeEnemyBase = new System.Windows.Forms.ComboBox();
@@ -175,10 +179,7 @@
             this.tabConsole = new System.Windows.Forms.TabPage();
             this.console = new System.Windows.Forms.RichTextBox();
             this.tReloadSavedGames = new System.Windows.Forms.Timer(this.components);
-            this.tabMods = new System.Windows.Forms.TabPage();
-            this.modEnabled = new System.Windows.Forms.CheckBox();
-            this.modPath = new System.Windows.Forms.TextBox();
-            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
+            this.settingsNoLogRotation = new System.Windows.Forms.CheckBox();
             this.groupVisibility.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.gInstallFactorio.SuspendLayout();
@@ -190,13 +191,13 @@
             this.tabControl2.SuspendLayout();
             this.tabTags.SuspendLayout();
             this.tabAdmins.SuspendLayout();
+            this.tabMods.SuspendLayout();
             this.tabMapGenerator.SuspendLayout();
             this.gbSize.SuspendLayout();
             this.gbFrequency.SuspendLayout();
             this.gbRichness.SuspendLayout();
             this.tabSteamCMD.SuspendLayout();
             this.tabConsole.SuspendLayout();
-            this.tabMods.SuspendLayout();
             this.SuspendLayout();
             // 
             // bStartServer
@@ -204,7 +205,7 @@
             this.bStartServer.BackColor = System.Drawing.Color.White;
             this.bStartServer.Enabled = false;
             this.bStartServer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bStartServer.Location = new System.Drawing.Point(612, 336);
+            this.bStartServer.Location = new System.Drawing.Point(613, 355);
             this.bStartServer.Name = "bStartServer";
             this.bStartServer.Size = new System.Drawing.Size(130, 40);
             this.bStartServer.TabIndex = 37;
@@ -239,7 +240,7 @@
             // 
             this.bSaveSettings.Enabled = false;
             this.bSaveSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bSaveSettings.Location = new System.Drawing.Point(612, 302);
+            this.bSaveSettings.Location = new System.Drawing.Point(613, 319);
             this.bSaveSettings.Name = "bSaveSettings";
             this.bSaveSettings.Size = new System.Drawing.Size(130, 30);
             this.bSaveSettings.TabIndex = 36;
@@ -668,7 +669,7 @@
             // bLoadSettings
             // 
             this.bLoadSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bLoadSettings.Location = new System.Drawing.Point(612, 268);
+            this.bLoadSettings.Location = new System.Drawing.Point(613, 285);
             this.bLoadSettings.Name = "bLoadSettings";
             this.bLoadSettings.Size = new System.Drawing.Size(130, 30);
             this.bLoadSettings.TabIndex = 35;
@@ -683,7 +684,7 @@
             this.listBoxSavedGames.HorizontalScrollbar = true;
             this.listBoxSavedGames.Location = new System.Drawing.Point(612, 20);
             this.listBoxSavedGames.Name = "listBoxSavedGames";
-            this.listBoxSavedGames.Size = new System.Drawing.Size(132, 238);
+            this.listBoxSavedGames.Size = new System.Drawing.Size(132, 264);
             this.listBoxSavedGames.TabIndex = 34;
             this.listBoxSavedGames.Click += new System.EventHandler(this.listBoxSavedGames_Click);
             // 
@@ -831,7 +832,7 @@
             // showCmd
             // 
             this.showCmd.AutoSize = true;
-            this.showCmd.Location = new System.Drawing.Point(664, 436);
+            this.showCmd.Location = new System.Drawing.Point(613, 425);
             this.showCmd.Name = "showCmd";
             this.showCmd.Size = new System.Drawing.Size(80, 17);
             this.showCmd.TabIndex = 0;
@@ -1127,6 +1128,52 @@
             this.tabAdmins.TabIndex = 1;
             this.tabAdmins.Text = "Admins";
             this.tabAdmins.UseVisualStyleBackColor = true;
+            // 
+            // tabMods
+            // 
+            this.tabMods.Controls.Add(this.linkLabel3);
+            this.tabMods.Controls.Add(this.modPath);
+            this.tabMods.Controls.Add(this.modEnabled);
+            this.tabMods.Location = new System.Drawing.Point(4, 22);
+            this.tabMods.Name = "tabMods";
+            this.tabMods.Size = new System.Drawing.Size(152, 191);
+            this.tabMods.TabIndex = 2;
+            this.tabMods.Text = "Mods";
+            this.tabMods.UseVisualStyleBackColor = true;
+            // 
+            // linkLabel3
+            // 
+            this.linkLabel3.ActiveLinkColor = System.Drawing.Color.Black;
+            this.linkLabel3.DisabledLinkColor = System.Drawing.Color.Black;
+            this.linkLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel3.LinkArea = new System.Windows.Forms.LinkArea(68, 0);
+            this.linkLabel3.LinkColor = System.Drawing.Color.Blue;
+            this.linkLabel3.Location = new System.Drawing.Point(23, 81);
+            this.linkLabel3.Name = "linkLabel3";
+            this.linkLabel3.Size = new System.Drawing.Size(97, 60);
+            this.linkLabel3.TabIndex = 101;
+            this.linkLabel3.Text = "Set custom mod folder or leave it blank to load from deafault folder";
+            this.linkLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.linkLabel3.UseCompatibleTextRendering = true;
+            this.linkLabel3.VisitedLinkColor = System.Drawing.Color.Black;
+            // 
+            // modPath
+            // 
+            this.modPath.Location = new System.Drawing.Point(3, 47);
+            this.modPath.Name = "modPath";
+            this.modPath.Size = new System.Drawing.Size(145, 20);
+            this.modPath.TabIndex = 1;
+            // 
+            // modEnabled
+            // 
+            this.modEnabled.AutoSize = true;
+            this.modEnabled.Location = new System.Drawing.Point(23, 11);
+            this.modEnabled.Name = "modEnabled";
+            this.modEnabled.Size = new System.Drawing.Size(106, 17);
+            this.modEnabled.TabIndex = 0;
+            this.modEnabled.Text = "Mods is Disabled";
+            this.modEnabled.UseVisualStyleBackColor = true;
+            this.modEnabled.CheckedChanged += new System.EventHandler(this.modEnabled_CheckedChanged);
             // 
             // tabMapGenerator
             // 
@@ -1847,51 +1894,15 @@
             this.tReloadSavedGames.Interval = 2000;
             this.tReloadSavedGames.Tick += new System.EventHandler(this.tReloadSavedGames_Tick);
             // 
-            // tabMods
+            // settingsNoLogRotation
             // 
-            this.tabMods.Controls.Add(this.linkLabel3);
-            this.tabMods.Controls.Add(this.modPath);
-            this.tabMods.Controls.Add(this.modEnabled);
-            this.tabMods.Location = new System.Drawing.Point(4, 22);
-            this.tabMods.Name = "tabMods";
-            this.tabMods.Size = new System.Drawing.Size(152, 191);
-            this.tabMods.TabIndex = 2;
-            this.tabMods.Text = "Mods";
-            this.tabMods.UseVisualStyleBackColor = true;
-            // 
-            // modEnabled
-            // 
-            this.modEnabled.AutoSize = true;
-            this.modEnabled.Location = new System.Drawing.Point(23, 11);
-            this.modEnabled.Name = "modEnabled";
-            this.modEnabled.Size = new System.Drawing.Size(106, 17);
-            this.modEnabled.TabIndex = 0;
-            this.modEnabled.Text = "Mods is Disabled";
-            this.modEnabled.UseVisualStyleBackColor = true;
-            this.modEnabled.CheckedChanged += new System.EventHandler(this.modEnabled_CheckedChanged);
-            // 
-            // modPath
-            // 
-            this.modPath.Location = new System.Drawing.Point(3, 47);
-            this.modPath.Name = "modPath";
-            this.modPath.Size = new System.Drawing.Size(145, 20);
-            this.modPath.TabIndex = 1;
-            // 
-            // linkLabel3
-            // 
-            this.linkLabel3.ActiveLinkColor = System.Drawing.Color.Black;
-            this.linkLabel3.DisabledLinkColor = System.Drawing.Color.Black;
-            this.linkLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel3.LinkArea = new System.Windows.Forms.LinkArea(68, 0);
-            this.linkLabel3.LinkColor = System.Drawing.Color.Blue;
-            this.linkLabel3.Location = new System.Drawing.Point(23, 81);
-            this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(97, 60);
-            this.linkLabel3.TabIndex = 101;
-            this.linkLabel3.Text = "Set custom mod folder or leave it blank to load from deafault folder";
-            this.linkLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.linkLabel3.UseCompatibleTextRendering = true;
-            this.linkLabel3.VisitedLinkColor = System.Drawing.Color.Black;
+            this.settingsNoLogRotation.AutoSize = true;
+            this.settingsNoLogRotation.Location = new System.Drawing.Point(613, 405);
+            this.settingsNoLogRotation.Name = "settingsNoLogRotation";
+            this.settingsNoLogRotation.Size = new System.Drawing.Size(95, 17);
+            this.settingsNoLogRotation.TabIndex = 106;
+            this.settingsNoLogRotation.Text = "No log rotation";
+            this.settingsNoLogRotation.UseVisualStyleBackColor = true;
             // 
             // FormMain
             // 
@@ -1899,6 +1910,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(754, 473);
+            this.Controls.Add(this.settingsNoLogRotation);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.lSaves);
             this.Controls.Add(this.showCmd);
@@ -1933,6 +1945,8 @@
             this.tabTags.PerformLayout();
             this.tabAdmins.ResumeLayout(false);
             this.tabAdmins.PerformLayout();
+            this.tabMods.ResumeLayout(false);
+            this.tabMods.PerformLayout();
             this.tabMapGenerator.ResumeLayout(false);
             this.tabMapGenerator.PerformLayout();
             this.gbSize.ResumeLayout(false);
@@ -1941,8 +1955,6 @@
             this.tabSteamCMD.ResumeLayout(false);
             this.tabSteamCMD.PerformLayout();
             this.tabConsole.ResumeLayout(false);
-            this.tabMods.ResumeLayout(false);
-            this.tabMods.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2098,6 +2110,7 @@
         public System.Windows.Forms.TextBox modPath;
         public System.Windows.Forms.CheckBox modEnabled;
         private System.Windows.Forms.LinkLabel linkLabel3;
+        public System.Windows.Forms.CheckBox settingsNoLogRotation;
     }
 }
 

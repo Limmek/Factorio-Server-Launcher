@@ -30,6 +30,9 @@ namespace FactorioServerLauncher
                 else
                     StartArguments = StartArguments + " --mod-directory " + Settings.factorioModsPath;
 
+            if (mainForm.settingsNoLogRotation.Checked)
+                StartArguments = StartArguments + " --no-log-rotation";
+
             ProcessStartInfo startInfo = new ProcessStartInfo();
             startInfo.WindowStyle = ProcessWindowStyle.Normal;
             startInfo.Verb = "runas";

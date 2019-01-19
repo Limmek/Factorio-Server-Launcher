@@ -13,6 +13,7 @@ namespace FactorioServerLauncher
 {
     class Settings
     {
+        public static Int32 appId = 427520;
         public static string appDataPath;
         public static string programPath;
         public static string programX86Path;
@@ -110,6 +111,8 @@ namespace FactorioServerLauncher
                 mainForm.showCmd.Checked = (Boolean)config["show_cmd"];
                 mainForm.steamCmd.Text = (string)config["steam_path"];
             }
+
+            mainForm.settingsNoLogRotation.Checked = true; // Default no log rotation set to true
 
             WriteLog(mainForm);
         }
