@@ -6,7 +6,7 @@ This tool allow you to host a dedicated server on the same machine the game is r
 ### Supports ONLY Steam and SteamCMD installation of Factorio!
 
 # Download
-Get the last version [here](https://github.com/Limmek/Factorio-Server-Launcher/releases/download/1.0.1.0/FactorioServerLauncher.exe)
+Get the last version [here](https://github.com/Limmek/Factorio-Server-Launcher/releases/download/1.0.2.0/FactorioServerLauncher.exe)
 
 # Features
 * Run the server and play the game on same computer
@@ -20,6 +20,13 @@ Get the last version [here](https://github.com/Limmek/Factorio-Server-Launcher/r
 
 Tested on Windows 10 and Windows server 2016.
 
+# Changelog
+[1.0.1.0]
+ * Mod support
+  
+[1.0.2.0]
+ * Run server and a game client on the same computer --no-log-rotation as default
+  
 # Screenshots
 <img src="https://raw.githubusercontent.com/Limmek/Factorio-Server-Launcher/master/images/server-settings.jpg">
 <img src="https://raw.githubusercontent.com/Limmek/Factorio-Server-Launcher/master/images/map-generator.jpg">
