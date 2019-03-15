@@ -19,6 +19,9 @@ namespace FactorioServerLauncher
         public static string programX86Path;
 
         public static string steamPath;                                     // Steam
+        public static bool betaOptIn;                                       // Use Beta track
+        public static string betaVersion;                                   // Specified beta version
+        public static string steamUsername;                                 // Storing steam username locally for ease of use
 
         public static string factorioInstallPath;                           // Factorio installation folder
         public static string factorioPath;                                  // Factorio resources 
@@ -76,7 +79,7 @@ namespace FactorioServerLauncher
                     }
                 }
             }
-
+            
             factorioPath = appDataPath + @"\factorio\";
             factorioModsPath = factorioPath + @"mods\";
             factorioSavesPath = factorioPath + @"saves\";
@@ -110,6 +113,20 @@ namespace FactorioServerLauncher
                 JObject config = (JObject)configObject;
                 mainForm.showCmd.Checked = (Boolean)config["show_cmd"];
                 mainForm.steamCmd.Text = (string)config["steam_path"];
+
+                betaVersion = (string)config["steam_betaVersion"];
+                steamUsername = (string)config["steam_username"];
+
+
+                mainForm.steamBetaVersion.Text = betaVersion;
+                mainForm.steamUsername.Text = steamUsername;
+
+                if (config["steam_beta"] != null)
+                {
+                    betaOptIn = (Boolean)config["steam_beta"];
+                    mainForm.steamBetaOptIn.Checked = betaOptIn;
+                }
+                
             }
 
             mainForm.settingsNoLogRotation.Checked = true; // Default no log rotation set to true
@@ -208,6 +225,17 @@ namespace FactorioServerLauncher
             mainForm.console.AppendText("Server launcher server config: " + factorioLauncherConfig);
             mainForm.console.AppendText("Server launcher server settings: " + factorioLauncherServerSettingsFile);
 
+        }
+
+        public static void saveSteamSettings(string path, bool betaOptIn, string betaVersion, string username)
+        {
+            JObject configObject = JObject.Parse(File.ReadAllText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\FactorioLauncher\launcher-config.json"));
+            JObject config = (JObject)configObject;
+            config["steam_path"] = ((string)path);
+            config["steam_beta"] = ((bool)betaOptIn);
+            config["steam_betaVersion"] = ((string)betaVersion);
+            config["steam_username"] = ((string)username);
+            File.WriteAllText(factorioLauncherSettingsFile, config.ToString());
         }
 
         public static void SetSteamPath(string path)
