@@ -17,14 +17,14 @@ namespace FactorioServerLauncher
         public static Process DownloadFactorio = new Process();
 
         [PermissionSet(SecurityAction.Demand, Name = "FullTrust")]
-        public static void Start(string Path, string Username = "", string Password = "")
+        public static void Start(string Path, string Username = "", string Password = "", string TwoFactor = "", bool steamBetaOptIn = false, string steamBetaVersion = "")
         {
             string tempPath = System.IO.Path.GetTempPath();
             string AnonumysLogin = "";
             if (Username != "" && Password != "")
-                AnonumysLogin = "login " + Username + " " + Password;
+                AnonumysLogin = "login " + Username + " " + Password + " " + TwoFactor;
 
-            CreateSteamCmdScript(AnonumysLogin);
+            CreateSteamCmdScript(AnonumysLogin, steamBetaOptIn, steamBetaVersion);
 
             var StartArguments = "+runscript " + tempPath + "steamcmd.txt";
             ProcessStartInfo startInfo = new ProcessStartInfo
@@ -50,12 +50,19 @@ namespace FactorioServerLauncher
             }
         }
 
-        private static void CreateSteamCmdScript(string login)
+        private static void CreateSteamCmdScript(string login, bool steamBetaOptIn, string steamBetaVersion)
         {
+            string beta = "";
+
+            if (steamBetaOptIn)
+            {
+                beta = "-beta " + steamBetaVersion;
+            }
+
             string[] scriptLines = {
                 login,
                 "force_install_dir \"" + Settings.factorioInstallPath + "\"",
-                "app_update "+ Settings.appId.ToString(),
+                "app_update " + Settings.appId.ToString() + " " + beta,
                 "quit"
             };
 

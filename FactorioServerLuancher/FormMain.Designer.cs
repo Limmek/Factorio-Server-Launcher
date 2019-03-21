@@ -104,6 +104,11 @@
             this.bInstallFactorio = new System.Windows.Forms.Button();
             this.imageList = new System.Windows.Forms.ImageList(this.components);
             this.gInstallFactorio = new System.Windows.Forms.GroupBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.steamTwoFactor = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.steamBetaVersion = new System.Windows.Forms.TextBox();
+            this.steamBetaOptIn = new System.Windows.Forms.CheckBox();
             this.bDownloadSteamCMD = new System.Windows.Forms.Button();
             this.bSteamCmd = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
@@ -881,10 +886,10 @@
             this.bInstallFactorio.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bInstallFactorio.ImageIndex = 0;
             this.bInstallFactorio.ImageList = this.imageList;
-            this.bInstallFactorio.Location = new System.Drawing.Point(159, 147);
+            this.bInstallFactorio.Location = new System.Drawing.Point(160, 238);
             this.bInstallFactorio.Name = "bInstallFactorio";
             this.bInstallFactorio.Size = new System.Drawing.Size(124, 40);
-            this.bInstallFactorio.TabIndex = 102;
+            this.bInstallFactorio.TabIndex = 8;
             this.bInstallFactorio.Text = "Install Factorio";
             this.bInstallFactorio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.bInstallFactorio.UseVisualStyleBackColor = false;
@@ -900,6 +905,11 @@
             // 
             // gInstallFactorio
             // 
+            this.gInstallFactorio.Controls.Add(this.label16);
+            this.gInstallFactorio.Controls.Add(this.steamTwoFactor);
+            this.gInstallFactorio.Controls.Add(this.label15);
+            this.gInstallFactorio.Controls.Add(this.steamBetaVersion);
+            this.gInstallFactorio.Controls.Add(this.steamBetaOptIn);
             this.gInstallFactorio.Controls.Add(this.bDownloadSteamCMD);
             this.gInstallFactorio.Controls.Add(this.bSteamCmd);
             this.gInstallFactorio.Controls.Add(this.label12);
@@ -908,12 +918,55 @@
             this.gInstallFactorio.Controls.Add(this.steamPassword);
             this.gInstallFactorio.Controls.Add(this.bInstallFactorio);
             this.gInstallFactorio.Controls.Add(this.steamUsername);
-            this.gInstallFactorio.Location = new System.Drawing.Point(144, 62);
+            this.gInstallFactorio.Location = new System.Drawing.Point(143, 44);
             this.gInstallFactorio.Name = "gInstallFactorio";
-            this.gInstallFactorio.Size = new System.Drawing.Size(300, 205);
+            this.gInstallFactorio.Size = new System.Drawing.Size(302, 302);
             this.gInstallFactorio.TabIndex = 103;
             this.gInstallFactorio.TabStop = false;
             this.gInstallFactorio.Text = "Install Factorio";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(17, 106);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(89, 13);
+            this.label16.TabIndex = 111;
+            this.label16.Text = "Two Factor Code";
+            // 
+            // steamTwoFactor
+            // 
+            this.steamTwoFactor.Location = new System.Drawing.Point(20, 122);
+            this.steamTwoFactor.Name = "steamTwoFactor";
+            this.steamTwoFactor.Size = new System.Drawing.Size(220, 20);
+            this.steamTwoFactor.TabIndex = 2;
+            this.steamTwoFactor.UseSystemPasswordChar = true;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(112, 201);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(70, 13);
+            this.label15.TabIndex = 109;
+            this.label15.Text = "Beta Version:";
+            // 
+            // steamBetaVersion
+            // 
+            this.steamBetaVersion.Location = new System.Drawing.Point(182, 198);
+            this.steamBetaVersion.Name = "steamBetaVersion";
+            this.steamBetaVersion.Size = new System.Drawing.Size(101, 20);
+            this.steamBetaVersion.TabIndex = 6;
+            // 
+            // steamBetaOptIn
+            // 
+            this.steamBetaOptIn.AutoSize = true;
+            this.steamBetaOptIn.Location = new System.Drawing.Point(20, 200);
+            this.steamBetaOptIn.Name = "steamBetaOptIn";
+            this.steamBetaOptIn.Size = new System.Drawing.Size(77, 17);
+            this.steamBetaOptIn.TabIndex = 5;
+            this.steamBetaOptIn.Text = "Beta OptIn";
+            this.steamBetaOptIn.UseVisualStyleBackColor = true;
             // 
             // bDownloadSteamCMD
             // 
@@ -921,10 +974,10 @@
             this.bDownloadSteamCMD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bDownloadSteamCMD.ImageIndex = 1;
             this.bDownloadSteamCMD.ImageList = this.imageList;
-            this.bDownloadSteamCMD.Location = new System.Drawing.Point(19, 147);
+            this.bDownloadSteamCMD.Location = new System.Drawing.Point(20, 238);
             this.bDownloadSteamCMD.Name = "bDownloadSteamCMD";
             this.bDownloadSteamCMD.Size = new System.Drawing.Size(132, 40);
-            this.bDownloadSteamCMD.TabIndex = 106;
+            this.bDownloadSteamCMD.TabIndex = 7;
             this.bDownloadSteamCMD.Text = "Download Steam CMD";
             this.bDownloadSteamCMD.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.bDownloadSteamCMD.UseVisualStyleBackColor = false;
@@ -936,10 +989,10 @@
             this.bSteamCmd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bSteamCmd.ImageIndex = 2;
             this.bSteamCmd.ImageList = this.imageList;
-            this.bSteamCmd.Location = new System.Drawing.Point(246, 114);
+            this.bSteamCmd.Location = new System.Drawing.Point(246, 151);
             this.bSteamCmd.Name = "bSteamCmd";
             this.bSteamCmd.Size = new System.Drawing.Size(37, 30);
-            this.bSteamCmd.TabIndex = 104;
+            this.bSteamCmd.TabIndex = 4;
             this.bSteamCmd.UseVisualStyleBackColor = false;
             this.bSteamCmd.Click += new System.EventHandler(this.bSteamCmd_Click);
             // 
@@ -963,10 +1016,10 @@
             // 
             // steamCmd
             // 
-            this.steamCmd.Location = new System.Drawing.Point(20, 120);
+            this.steamCmd.Location = new System.Drawing.Point(20, 157);
             this.steamCmd.Name = "steamCmd";
             this.steamCmd.Size = new System.Drawing.Size(220, 20);
-            this.steamCmd.TabIndex = 103;
+            this.steamCmd.TabIndex = 3;
             this.steamCmd.Text = "C:\\steamcmd";
             // 
             // steamPassword
@@ -2032,7 +2085,6 @@
         private System.Windows.Forms.GroupBox gInstallFactorio;
         private System.Windows.Forms.Button bSteamCmd;
         private System.Windows.Forms.TextBox steamPassword;
-        private System.Windows.Forms.TextBox steamUsername;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.TextBox steamCmd;
@@ -2111,6 +2163,12 @@
         public System.Windows.Forms.CheckBox modEnabled;
         private System.Windows.Forms.LinkLabel linkLabel3;
         public System.Windows.Forms.CheckBox settingsNoLogRotation;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox steamTwoFactor;
+        internal System.Windows.Forms.TextBox steamUsername;
+        internal System.Windows.Forms.TextBox steamBetaVersion;
+        internal System.Windows.Forms.CheckBox steamBetaOptIn;
     }
 }
 

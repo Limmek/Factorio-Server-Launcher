@@ -255,7 +255,7 @@ namespace FactorioServerLauncher
 
         private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Settings.SetSteamPath(Settings.steamPath);
+            Settings.saveSteamSettings(Settings.steamPath, Settings.betaOptIn, Settings.betaVersion, Settings.steamUsername);
             StartServer.stop();
         }
 
@@ -266,7 +266,16 @@ namespace FactorioServerLauncher
                 MessageBox.Show("Steam CMD not found!");
                 return;
             }
-            Download.Start(steamCmd.Text, steamUsername.Text, steamPassword.Text);
+            Settings.betaOptIn = steamBetaOptIn.Checked;
+            Settings.betaVersion = steamBetaVersion.Text;
+            Settings.steamUsername = steamUsername.Text;
+
+            Download.Start(steamCmd.Text, 
+                steamUsername.Text, 
+                steamPassword.Text, 
+                steamTwoFactor.Text,
+                steamBetaOptIn.Checked, 
+                steamBetaVersion.Text);
         }
 
         private void bSteamCmd_Click(object sender, EventArgs e)
